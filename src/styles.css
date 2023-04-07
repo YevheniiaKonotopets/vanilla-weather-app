@@ -1,0 +1,147 @@
+body {
+  background: #f9f7fe;
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  color: #272142;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 48px;
+  margin: 20px 0 10px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin-bottom: 5 px;
+  line-height: 425pxpx;
+}
+
+.weather-data {
+  color: #f65282;
+}
+
+.temperature {
+  margin-top: 20px;
+  font-weight: bold;
+  color: rgb(33, 33, 33);
+  margin-left: 5px;
+  font-weight: 400;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 1;
+}
+
+.unit {
+  color: rgb(33, 33, 33);
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: normal;
+  position: relative;
+  top: 25px;
+}
+
+.weather-app {
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  padding: 40px;
+}
+
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.weather-form {
+  margin-top: 5px;
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 30px;
+}
+
+.search-input {
+  background: #f9f7fe;
+  border: none;
+  border-radius: 6px;
+  color: rgba(39, 33, 66, 0.4);
+  display: inline-block;
+  font-size: 16px;
+  height: 50px;
+  line-height: 20px;
+  padding: 15px 20px;
+}
+
+.search-input::placeholder {
+  line-height: 20px;
+  color: rgba(39, 33, 66, 0.4);
+}
+
+.search-button {
+  background: #885df1;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  height: 50px;
+  padding: 15px 0;
+}
+
+.weather-info {
+  margin-top: 20px;
+  color: #878787;
+  line-height: 20px;
+}
+
+.weather-forcast {
+  margin: 70px 0 40px;
+  text-align: center;
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 50px;
+}
+
+.forecast-day {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: rgba(39, 33, 66, 0.4);
+  padding-bottom: 10px;
+}
+
+.forecast-temperature {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #f65282;
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+.forecast-temperature-lowest {
+  opacity: 0.6;
+}
+
+.img {
+  display: block;
+  margin: 20px auto;
+  color: rgb(33, 33, 33);
+}
+
+.footnote {
+  color: #878787;
+  font-size: 14px;
+  text-align: center;
+  color: rgba(39, 33, 66, 0.4);
+}
+
+.footnote a {
+  color: #885df1;
+}
