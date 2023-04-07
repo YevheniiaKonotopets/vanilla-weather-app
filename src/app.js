@@ -79,4 +79,4 @@ farenhaitLink.addEventListener("click", showFarenhaitTemp);
 let celsiusLink = document.querySelector("#celsiusLink");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
-search("San Francisco");
+search("Lund");
