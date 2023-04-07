@@ -1,54 +1,7 @@
+/*Main elements*/
 body {
   background: #f9f7fe;
   font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
-}
-
-h1 {
-  color: #272142;
-  font-size: 38px;
-  font-weight: 700;
-  line-height: 48px;
-  margin: 20px 0 10px;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  color: rgba(39, 33, 66, 0.4);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  list-style: none;
-  margin-bottom: 5 px;
-  line-height: 425pxpx;
-}
-
-.weather-data {
-  color: #f65282;
-}
-
-.temperature {
-  margin-top: 20px;
-  font-weight: bold;
-  color: rgb(33, 33, 33);
-  margin-left: 5px;
-  font-weight: 400;
-  margin-left: 10px;
-  font-weight: bold;
-  font-size: 80px;
-  line-height: 1;
-}
-
-.unit {
-  color: rgb(33, 33, 33);
-  font-size: 28px;
-  line-height: 36px;
-  font-weight: normal;
-  position: relative;
-  top: 25px;
 }
 
 .weather-app {
@@ -64,6 +17,7 @@ li {
   margin: 30px auto;
 }
 
+/*Form*/
 .weather-form {
   margin-top: 5px;
   border-bottom: 1px solid #f9f7fe;
@@ -96,12 +50,62 @@ li {
   padding: 15px 0;
 }
 
+/*Info*/
+h1 {
+  color: #272142;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 48px;
+  margin: 20px 0 10px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin-bottom: 5 px;
+  line-height: 425pxpx;
+}
+
 .weather-info {
   margin-top: 20px;
   color: #878787;
   line-height: 20px;
 }
 
+.weather-data {
+  color: #f65282;
+}
+
+.temperature {
+  margin-top: 20px;
+  font-weight: bold;
+  color: rgb(33, 33, 33);
+  margin-left: 5px;
+  font-weight: 400;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 1;
+}
+
+.unit {
+  color: rgb(33, 33, 33);
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: normal;
+  position: relative;
+  top: 25px;
+}
+
+/*Forecast*/
 .weather-forcast {
   margin: 70px 0 40px;
   text-align: center;
@@ -135,6 +139,7 @@ li {
   color: rgb(33, 33, 33);
 }
 
+/*Footnote*/
 .footnote {
   color: #878787;
   font-size: 14px;
