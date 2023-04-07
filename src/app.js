@@ -1,7 +1,3 @@
-let apiKey = "bfb7te16e3bfb40a3db6aod25134ef7e";
-let city = "Lund";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-
 function currentTime(timestamp) {
   let date = new Date();
   let days = [
@@ -20,13 +16,12 @@ function currentTime(timestamp) {
   }
   let minutes = date.getMinutes();
   if (minutes < 10) {
-    minutes = "0" + hours;
+    minutes = "0" + minutes;
   }
   return `${day} ${hours}:${minutes}`;
 }
 
 function displayTemp(response) {
-  console.log(response.data);
   let tempElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#cityName");
   let descriptionElement = document.querySelector("#weatherDescription");
@@ -43,4 +38,18 @@ function displayTemp(response) {
   dataElement.innerHTML = currentTime(response.data.time * 1000);
 }
 
-axios.get(apiUrl).then(displayTemp);
+function search(city) {
+  let apiKey = "bfb7te16e3bfb40a3db6aod25134ef7e";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemp);
+}
+
+function handleSumit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#cityInput");
+  search(cityInputElement.value);
+}
+
+search("Lund");
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSumit);
