@@ -66,7 +66,7 @@ ul {
 
 li {
   color: rgba(39, 33, 66, 0.4);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 20px;
   list-style: none;
@@ -94,6 +94,26 @@ li {
   font-weight: bold;
   font-size: 80px;
   line-height: 1;
+}
+
+a {
+  color: #885df1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #885df1;
+  text-decoration: none;
+}
+
+.active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.active:hover {
+  color: rgb(33, 33, 33);
+  text-decoration: none;
 }
 
 .unit {
