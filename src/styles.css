@@ -105,6 +105,13 @@ li {
   top: 25px;
 }
 
+.unit-img {
+  position: relative;
+  top: 17px;
+  width: 50px;
+  height: 50px;
+}
+
 /*Forecast*/
 .weather-forcast {
   margin: 70px 0 40px;

@@ -11,6 +11,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
@@ -36,19 +37,22 @@
         <div class="weather-info">
           <div class="row">
             <div class="col-7">
-              <h1>San Francisco</h1>
+              <h1 id="cityName">San Francisco</h1>
               <ul>
-                <li>Sunday 15:44, broken clouds</li>
+                <li>
+                  <span id="currentTime">Sunday 15:44</span>,
+                  <span id="weatherDescription">broken clouds</span>
+                </li>
                 <li>
                   Humidity:
-                  <span class="weather-data">81%</span>, Wind:
-                  <span class="weather-data">6.69 km/h</span>
+                  <span class="weather-data" id="humidity">81%</span>, Wind:
+                  <span class="weather-data" id="wind">6.69 km/h</span>
                 </li>
               </ul>
             </div>
             <div class="col-5 d-flex justify-content-end">
-              <span class="unit">☁</span>
-              <span class="temperature">9</span>
+              <img src="" class="unit-img" id="weatherIcon" />
+              <span class="temperature" id="temperature">9</span>
               <span class="unit">°C</span>
             </div>
           </div>
