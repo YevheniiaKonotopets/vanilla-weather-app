@@ -21,6 +21,33 @@ function currentTime(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast(response) {
+  console.log(response.data);
+  let forecastElement = document.querySelector("#weatherForcast");
+
+  let forecastHTML = "";
+  let days = ["Sun", "Mon", "Tue", "Wed" /* "Thu", "Fri", "Sat"*/];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+       <div class="forecast-day">${day}</div>
+       <img src="" />
+        <div class="forecast-temperature">
+        12° <span class="forecast-temperature-lowest">9°</span>
+        </div>
+     </div>`;
+    forecastElement.innerHTML = forecastHTML;
+  });
+}
+
+function getForecast(city) {
+  console.log(city);
+  let apiKey = "bfb7te16e3bfb40a3db6aod25134ef7e";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayTemp(response) {
   let tempElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#cityName");
@@ -37,6 +64,8 @@ function displayTemp(response) {
   windElement.innerHTML = response.data.wind.speed + " km/h";
   dataElement.innerHTML = currentTime(response.data.time * 1000);
   celsiusTemp = response.data.temperature.current;
+
+  getForecast(response.data.city);
 }
 
 function search(city) {
@@ -49,25 +78,6 @@ function handleSumit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#cityInput");
   search(cityInputElement.value);
-}
-
-function displayForecast() {
-  let forecastElement = document.querySelector("#weatherForcast");
-
-  let forecastHTML = "";
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col">
-       <div class="forecast-day">${day}</div>
-       <img src="" />
-        <div class="forecast-temperature">
-        12° <span class="forecast-temperature-lowest">9°</span>
-        </div>
-     </div>`;
-    forecastElement.innerHTML = forecastHTML;
-  });
 }
 
 function showFarenhaitTemp(event) {
@@ -99,4 +109,3 @@ let celsiusLink = document.querySelector("#celsiusLink");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
 search("Lund");
-displayForecast();
