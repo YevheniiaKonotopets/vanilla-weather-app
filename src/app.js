@@ -51,6 +51,25 @@ function handleSumit(event) {
   search(cityInputElement.value);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#weatherForcast");
+
+  let forecastHTML = "";
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+       <div class="forecast-day">${day}</div>
+       <img src="" />
+        <div class="forecast-temperature">
+        12° <span class="forecast-temperature-lowest">9°</span>
+        </div>
+     </div>`;
+    forecastElement.innerHTML = forecastHTML;
+  });
+}
+
 function showFarenhaitTemp(event) {
   event.preventDefault();
   let tempElement = document.querySelector("#temperature");
@@ -80,3 +99,4 @@ let celsiusLink = document.querySelector("#celsiusLink");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
 search("Lund");
+displayForecast();
