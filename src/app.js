@@ -93,32 +93,9 @@ function handleSumit(event) {
   search(cityInputElement.value);
 }
 
-function showFarenhaitTemp(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#temperature");
-  let farenhaitTemp = (celsiusTemp * 9) / 5 + 32;
-  tempElement.innerHTML = Math.round(farenhaitTemp);
-  celsiusLink.classList.remove("active");
-  farenhaitLink.classList.add("active");
-}
-
-function showCelsiusTemp(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#temperature");
-  tempElement.innerHTML = Math.round(celsiusTemp);
-  celsiusLink.classList.add("active");
-  farenhaitLink.classList.remove("active");
-}
-
 let celsiusTemp = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSumit);
-
-let farenhaitLink = document.querySelector("#farenhaitLink");
-farenhaitLink.addEventListener("click", showFarenhaitTemp);
-
-let celsiusLink = document.querySelector("#celsiusLink");
-celsiusLink.addEventListener("click", showCelsiusTemp);
 
 search("Lund");
